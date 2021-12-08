@@ -15,9 +15,11 @@ const getCharacters = (req: Request, res: Response) => {
 };
 
 const getCharacterById = (req: Request, res: Response) => {
+  const id = req.params.id;
     try {
         res.json({
             message: "getCharacterById",
+            id
         });
     } catch (error) {
         res.status(500).json({
