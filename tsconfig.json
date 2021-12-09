@@ -14,7 +14,8 @@
       "resolveJsonModule": true,
       "esModuleInterop": true,
       "experimentalDecorators": true,
-      "strictPropertyInitialization": false
+      "strictPropertyInitialization": false,
+      "emitDecoratorMetadata": true,
 
     },
     "include": [
