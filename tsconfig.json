@@ -12,7 +12,10 @@
       "declaration": true,
       "declarationMap": true,
       "resolveJsonModule": true,
-      "esModuleInterop": true
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "strictPropertyInitialization": false
+
     },
     "include": [
       "./src/**/*"
