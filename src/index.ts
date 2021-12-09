@@ -1,5 +1,8 @@
 import express from "express";
 import mysql from "mysql";
+import "reflect-metadata";
+
+
 import routes from "./routes/index.routes";
 
 
