@@ -1,14 +1,16 @@
+import 'dotenv/config'
 import express from "express";
 import "reflect-metadata";
-import { createConnection } from "typeorm";
+import conManager from "./db/ormconfig"; 
 import cors from "cors";
 import morgan from "morgan";
 
 import charactersRouter from "./routes/characters.routes";
 
+
 const app = express();
-createConnection();
-const port = process.env.PORT || 3000;
+conManager();
+const port = process.env.PORT ;
 
 // Middlewares
 app.use(cors());
