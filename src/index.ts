@@ -1,16 +1,22 @@
 import express from "express";
-import mysql from "mysql";
 import "reflect-metadata";
+import { createConnection } from "typeorm";
+import cors from "cors";
+import morgan from "morgan";
 
-
-import routes from "./routes/index.routes";
-
+import charactersRouter from "./routes/characters.routes";
 
 const app = express();
+createConnection();
 const port = process.env.PORT || 3000;
 
+// Middlewares
+app.use(cors());
+app.use(morgan("dev"));
 app.use(express.json());
-app.use(routes);
+
+// Routes
+app.use(charactersRouter);
 
 
 app.listen(port, () => {
