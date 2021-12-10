@@ -11,6 +11,9 @@ export class CharacterEntity {
     @Column()
     species: string;
     
-    @Column()
+    @Column({
+        nullable: true
+    })
     image: string;
+
 }
