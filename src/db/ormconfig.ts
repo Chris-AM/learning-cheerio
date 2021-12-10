@@ -4,7 +4,7 @@ import { getConnectionManager, ConnectionManager, Connection } from "typeorm";
 const connectionManager = getConnectionManager();
 const connection = connectionManager.create({
   type: "mysql",
-  host: "localhost",
+  host: process.env.DB_HOST,
   port: 3306,
   username: process.env.DB_USER_NAME,
   password: process.env.DB_PASSWORD,
